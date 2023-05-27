@@ -1,0 +1,39 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.pauseOnHover:hover {
+  .content {
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  .content {
+    animation: marquee 5s infinite linear;
+    white-space: nowrap;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+  }
+
+  .leftOverlay {
+    left: 0;
+  }
+
+  .rightOverlay {
+    right: 0;
+  }
+}
